@@ -1,0 +1,2 @@
+# JavaScriptTraining
+JavaScript Assignment Solutions
