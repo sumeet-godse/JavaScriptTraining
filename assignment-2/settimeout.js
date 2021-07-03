@@ -1,6 +1,6 @@
 // Problem Statement 5 : Implement the setTimeout function using native javascript only. 
 function nativeJsTimeout(callbackFunction, seconds) {
-    var currTime = Date.now();
+    const currTime = Date.now();
 
     while ( Date.now() < ( currTime + seconds ) ) {
         continue;
@@ -13,6 +13,6 @@ function output() {
      console.log('Implemented after ' + delayInSeconds + ' seconds');
 }
 
-var delayInSeconds = prompt("Enter delay interval in seconds");
+const delayInSeconds = prompt("Enter delay interval in seconds");
 
 nativeJsTimeout(output, delayInSeconds*1000);

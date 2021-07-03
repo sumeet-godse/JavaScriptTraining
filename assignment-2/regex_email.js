@@ -6,9 +6,9 @@
  * (?:\.[a-zA-Z0-9-]+)* - matches domain, sub-domain
  * $ - String end
  */
-var regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/g;
+const regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/g;
 
-var email = prompt("Enter email");
+const email = prompt("Enter email");
  
 if ( regexEmail.test(email) ) {
     console.log("Valid Email");

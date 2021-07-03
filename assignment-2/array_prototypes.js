@@ -3,7 +3,7 @@
  * Implement a javascript Array having the following prototype functions without using Native javascript array:
  * a.push b.pop c.shift d.unshift e.length f.splice g.indexOf f.forEach 
  */
-var myArray = [1, 2, 3, 4, 5];
+let myArray = [1, 2, 3, 4, 5];
 
 console.log("Original Array - " + myArray);
 
@@ -49,7 +49,7 @@ Array.prototype.myUnShift = function() {
 };
 
 Array.prototype.myLength = function() {
-    var count = 0;
+    let count = 0;
 
     while(this[count]){
         count++;
@@ -59,7 +59,7 @@ Array.prototype.myLength = function() {
 };
 
 Array.prototype.myIndexOf = function() {
-    var index = -1;
+    let index = -1;
 
     for(let i = 0; i < this.myLength(); i++) {
         if( arguments[0] == this[i] ) {
@@ -78,8 +78,8 @@ Array.prototype.myForEach = function(callback) {
 };
 
 Array.prototype.mySplice = function() {
-    var start = arguments[0];
-    var deleteCount = arguments[1];
+    const start = arguments[0];
+    const deleteCount = arguments[1];
 
     for(let i = start; i < this.length; i++) {
         this[i] = this[i + deleteCount];
@@ -87,7 +87,7 @@ Array.prototype.mySplice = function() {
 
     this.length = this.length - deleteCount;
     
-    var newItemsLength = arguments.length - 2;
+    const newItemsLength = arguments.length - 2;
 
     if(newItemsLength !== 0) {
         for(let i = this.length-1; i >= start; i--) {

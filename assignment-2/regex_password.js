@@ -16,9 +16,9 @@
  * [\w!'`&=~%#\/\$\*\+\-\^\?\{\}\|\.]{1,64} - Rest of the password string, maxlen 64, minlen 1
  * $ - String end
  */
-var regexPassword = /^(?!^[.])(?!.*[.]$)(?!.*[.]{2})[\w!'`&=~%#\/\$\*\+\-\^\?\{\}\|\.]{1,64}$/g;
+const regexPassword = /^(?!^[.])(?!.*[.]$)(?!.*[.]{2})[\w!'`&=~%#\/\$\*\+\-\^\?\{\}\|\.]{1,64}$/g;
 
-var password = prompt("Enter password");
+const password = prompt("Enter password");
 
 if ( regexPassword.test(password) ) {
     console.log("Valid Password");
