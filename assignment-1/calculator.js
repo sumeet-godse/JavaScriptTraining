@@ -6,8 +6,8 @@
  * 3. mul() returns the multiplication product of these properties.
  */
  function Calculator() {
-    var firstNum = 5;
-    var lastNum = 10;
+    let firstNum = 5;
+    let lastNum = 10;
 
     return {
       read() {
@@ -25,7 +25,7 @@
     }
 }
 
-var obj1 = Calculator();
+let obj1 = Calculator();
 
 // Prints default answer
 console.log(obj1.sum());

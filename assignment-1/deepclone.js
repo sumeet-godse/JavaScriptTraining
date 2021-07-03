@@ -2,7 +2,7 @@
  * Problem Statement 4 : Deep clone Javascript Object (without using any internal methods of cloning).
  * All properties along with functions, prototypes should get cloned to target objects.
  */
-var oldObj = {
+let oldObj = {
     firstName: "Sumeet",
     lastName: "Godse",
 
@@ -11,7 +11,7 @@ var oldObj = {
     }
 };
 
-var clonedObj = {};
+let clonedObj = {};
 
 for ( key in oldObj ) {
     clonedObj[key] = oldObj[key];
