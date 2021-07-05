@@ -127,4 +127,3 @@ myArray.myForEach((currentValue) => {
 console.log("Original Array before splicing - " + myArray);
 myArray.mySplice(1,2,200,300);
 console.log("Array after mySplice(1,2,200,300) - " + myArray);
-
