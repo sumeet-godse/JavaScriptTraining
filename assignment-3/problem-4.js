@@ -4,14 +4,12 @@
  * and 1 takes two seconds to print, then 1 should wait for 0 to print, and so on.
  */
 // For loop which prints 0 to 10 at irregular intervals
-for(let i = 0; i <= 10; i++) {
-    let randomnumber = Math.floor(Math.random() * (6 - 0 + 1));
-    setTimeout(() => {
-        console.log("Printing " + i + " after " + randomnumber + " seconds.");
-    }, randomnumber * 1000);
-}
-
-// Our solution using promise.all
+// for(let i = 0; i <= 10; i++) {
+//     let randomnumber = Math.floor(Math.random() * (6 - 0 + 1));
+//     setTimeout(() => {
+//         console.log("Printing " + i + " after " + randomnumber + " seconds.");
+//     }, randomnumber * 1000);
+// }
 let promises = [];
 
 for(let i = 0; i < 11; i ++) {
@@ -24,4 +22,10 @@ for(let i = 0; i < 11; i ++) {
     promises.push(promise);
 }
 
-Promise.all(promises).then((message) => console.log(message));
+async function printItems() {
+    for(let k = 0; k < promises.length; k ++){
+        await promises[k].then((message) => console.log(message));
+    }
+}
+
+printItems();
