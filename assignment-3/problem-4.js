@@ -10,10 +10,10 @@
 //         console.log("Printing " + i + " after " + randomnumber + " seconds.");
 //     }, randomnumber * 1000);
 // }
-let promises = [];
+const promises = [];
 
 for(let i = 0; i < 11; i ++) {
-    let randomNumber = Math.floor(Math.random() * (6 - 0 + 1));
+    const randomNumber = Math.floor(Math.random() * (6 - 0 + 1));
     const promise = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve("Printing " + i + " after " + randomNumber + " seconds");
@@ -22,7 +22,7 @@ for(let i = 0; i < 11; i ++) {
     promises.push(promise);
 }
 
-async function printItems() {
+const printItems = async () => {
     for(let k = 0; k < promises.length; k ++){
         await promises[k].then((message) => console.log(message));
     }

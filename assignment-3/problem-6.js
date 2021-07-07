@@ -14,10 +14,11 @@
  */
 
 // Below solution can can be used as an answer
-const arr=[]
-for(let i = 0; i < 10; i++) {
+const arr = [];
+
+for(let i = 0; i < 10; i ++) {
     arr.push(i);
-    setTimeout(function() {
+    setTimeout(() => {
         console.log(arr.shift()); 
     }, 10);
 }

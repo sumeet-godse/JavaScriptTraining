@@ -14,22 +14,23 @@
 /**
  * We can solve the problem using promises
  */
-const somelist = [1, 2, 3, 4, 5];
+ const somelist = [1, 2, 3, 4, 5];
 
-const nextItem = function() {
-    const item = somelist.pop();
-    
-    if (item) {
-        processItem(item)
-        .then((message) => console.log(message))
-        .then(nextItem())
-    }
-};
-
-nextItem();
-
-function processItem(item) {
-    return new Promise((resolve, reject) => {
-        resolve("Processing item - " + item); 
-    });
-};
+ const processItem = (item) => {
+     return new Promise((resolve, reject) => {
+         resolve("Processing item - " + item); 
+     });
+ };
+ 
+ const nextItem = () => {
+     const item = somelist.pop();
+     
+     if (item) {
+         processItem(item)
+         .then((message) => console.log(message))
+         .then(nextItem())
+     }
+ };
+ 
+ nextItem();
+ 
